@@ -37,7 +37,7 @@ var notifications = [
   ];
   
   // Set the time interval for displaying notifications (in milliseconds)
-  var timeInterval = 23000;
+  var timeInterval = 33000;
   
   // Set the interval for displaying notifications
   setInterval(function() {
