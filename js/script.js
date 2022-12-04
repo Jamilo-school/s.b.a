@@ -26,3 +26,25 @@ const sr = ScrollReveal ({
 sr.reveal('.home-text',{delay:190, origin:'bottom'})
 
 sr.reveal('.about,.services,.portfolio,.contact',{delay:200, origin:'bottom'})
+
+// Create an array of notifications
+var notifications = [
+	"Welcome to school based Asssement portal.Fell at home",
+	"Mary christmas once again from Us",
+	"Mr oduor will be greating you in a while..",
+	"How are you visitor ? we hope you are fine.Thanks for being here with us",
+	"we are happy to have you onboard"
+  ];
+  
+  // Set the time interval for displaying notifications (in milliseconds)
+  var timeInterval = 23000;
+  
+  // Set the interval for displaying notifications
+  setInterval(function() {
+	// Generate a random number between 0 and the number of notifications
+	var randomNumber = Math.floor(Math.random() * notifications.length);
+  
+	// Display the random notification
+	alert(notifications[randomNumber]);
+  }, timeInterval);
+  
