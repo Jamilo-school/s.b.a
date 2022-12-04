@@ -27,24 +27,41 @@ sr.reveal('.home-text',{delay:190, origin:'bottom'})
 
 sr.reveal('.about,.services,.portfolio,.contact',{delay:200, origin:'bottom'})
 
-// Create an array of notifications
-var notifications = [
-	"Welcome to school based Asssement portal.Fell at home",
-	"Mary christmas once again from Us",
-	"Mr oduor will be greating you in a while..",
-	"How are you visitor ? we hope you are fine.Thanks for being here with us",
-	"we are happy to have you onboard"
-  ];
+
+
+// JavaScript code for generating random notifications
+function generateRandomNotification() {
+	// Create an array of possible notifications
+	var notifications = [
+	  "Welcome to Academic department website!",
+	  "Thanks for visiting our site.",
+	  "Mary christmass.",
+	  "Check out our latest blog post.",
+	  "Follow us on social media for updates.",
+	];
   
-  // Set the time interval for displaying notifications (in milliseconds)
-  var timeInterval = 33000;
+	// Generate a random number between 0 and the length of the array
+	var randomIndex = Math.floor(Math.random() * notifications.length);
   
-  // Set the interval for displaying notifications
-  setInterval(function() {
-	// Generate a random number between 0 and the number of notifications
-	var randomNumber = Math.floor(Math.random() * notifications.length);
+	// Use the random number to select a notification from the array
+	var notification = notifications[randomIndex];
   
-	// Display the random notification
-	alert(notifications[randomNumber]);
-  }, timeInterval);
+	// Display the notification using a "toast" style notification
+	var notificationElement = document.createElement("div");
+	notificationElement.classList.add("toast");
+	notificationElement.innerText = notification;
+	document.body.appendChild(notificationElement);
   
+	// Use a CSS transition to fade the notification in and out
+	notificationElement.classList.add("toast-enter");
+	setTimeout(function() {
+	  notificationElement.classList.remove("toast-enter");
+	  notificationElement.classList.add("toast-exit");
+	  setTimeout(function() {
+		notificationElement.remove();
+	  }, 2000);
+	}, 5000);
+  }
+  
+  // Generate a random notification every 5 seconds
+  setInterval(generateRandomNotification, 13000);
