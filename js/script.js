@@ -70,13 +70,13 @@ function generateRandomNotification() {
 
 
   // Set the timeout duration (in seconds)
-  var timeoutDuration = 5;
+  var timeoutDuration = 1200;
 
   // Set a timer to log out the user after the timeout duration
   setTimeout(function() {
     // Redirect the user to the logout page
     window.location.href = "https://jamilo-school.github.io/log-in/";
-  }, timeoutDuration * 550);
+  }, timeoutDuration * 1000);
 
   /////////////////////////////////////////////////////////////////////////////
 
@@ -87,7 +87,7 @@ var popup = document.createElement("div");
 popup.classList.add("popup");
 
 // Add the notification message to the pop up
-var message = document.createTextNode("Access Denied💫 ");
+var message = document.createTextNode("✅ Your have log-in successfully🧑‍⚕️ ");
 popup.appendChild(message);
 
 // Add the pop up to the page
