@@ -87,7 +87,7 @@ var popup = document.createElement("div");
 popup.classList.add("popup");
 
 // Add the notification message to the pop up
-var message = document.createTextNode("✅ Your have log-in successfully🧑‍⚕️ ");
+var message = document.createTextNode("🧑‍🔬log-in successfully🧑‍⚕️ ");
 popup.appendChild(message);
 
 // Add the pop up to the page
