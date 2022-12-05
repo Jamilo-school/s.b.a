@@ -70,7 +70,7 @@ function generateRandomNotification() {
 
 
   // Set the timeout duration (in seconds)
-  var timeoutDuration = 10;
+  var timeoutDuration = 3;
 
   // Set a timer to log out the user after the timeout duration
   setTimeout(function() {
@@ -87,7 +87,7 @@ var popup = document.createElement("div");
 popup.classList.add("popup");
 
 // Add the notification message to the pop up
-var message = document.createTextNode("We will log you out in 30sec💫..To check on your browser.");
+var message = document.createTextNode("Access Denied💫");
 popup.appendChild(message);
 
 // Add the pop up to the page
